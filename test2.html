@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" href="leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="../libs/leaflet/leaflet.ie.css" /><![endif]-->
+	<link rel="stylesheet" href="leaflet.label.css" />
+
+	<script src="leaflet-src.js"></script>
+
+	<script src="Label.js"></script>
+	<script src="BaseMarkerMethods.js"></script>
+	<script src="Marker.Label.js"></script>
+	<script src="CircleMarker.Label.js"></script>
+	<script src="Path.Label.js"></script>
+	<script src="Map.Label.js"></script>
+	<script src="FeatureGroup.Label.js"></script>      
+	<script src="underscore.js"></script>  
+  </head>               
+  <style>
+
+    #map { height: 380px; }
+
+  </style>            
+
+  <body>
+	<div id="map">
+		
+	</div>  	
+ 
+      <script>	          
+
+                                  
+
+//var marker = L.marker([51.497809, -0.092466]).addTo(map); 
+
+
+
+ window.markerLayers={};
+
+
+    function onMapClick(e) {
+    map = window.theMap;
+    mLayers = window.markerLayers;
+    zoom = map.getZoom();
+
+    if (_.isUndefined(mLayers[zoom])) {
+        mLayers[zoom]=L.layerGroup();
+    }
+    marker = L.marker(e.latlng);
+    mLayers[zoom].addLayer(marker);
+}
+
+function onZoomEnd(e) {
+    map = window.theMap;
+    mLayers = window.markerLayers;
+    zoom = map.getZoom();
+
+    if (! _.isUndefined(mLayers[zoom])){
+        map.addLayer(mLayers[zoom]);
+    }
+}
+
+function onZoomStart(e){
+    map = window.theMap;
+    mLayers = window.markerLayers;
+    zoom = map.getZoom();
+
+    if (! _.isUndefined(mLayers[zoom])){
+        map.removeLayer(mLayers[zoom]); 
+    }
+}
+
+
+
+var map = L.map('map').setView([51.505, -0.09], 13);
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    minZoom: 7,
+    id: 'rmiddlehouse.ciehb2ddu00a0shm3hqgl5mte',
+    accessToken: 'pk.eyJ1Ijoicm1pZGRsZWhvdXNlIiwiYSI6ImNpZWhiMmRvazAwYWxzdmtnNGl1OGhtcjQifQ.BI0NDrCeXTBA8N4wQ07bvw'
+}).addTo(map);
+                                  
+map.on('click', onMapClick);
+map.on('zoomend', onZoomEnd);
+map.on('zoomstart',onZoomStart);
+
+window.theMap = map;
+
+              
+ L.marker([51.5, -0.09])
+.bindLabel('A sweet static label!', { noHide: true })
+.addTo(map);
+
+
+
+
+
+
+
+
+
+	                  
+	</script>
+   
+  </body>
+
+</html>

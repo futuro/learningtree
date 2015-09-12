@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
- 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+ 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7-dev/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7-dev/leaflet.js"></script>       
   </head>               
   <style>
 
-    #map { height: 180px; }
+    #map { height: 380px; }
 
   </style>            
 
@@ -20,9 +20,22 @@
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 	    maxZoom: 18,
+	    minZoom: 7,
 	    id: 'rmiddlehouse.ciehb2ddu00a0shm3hqgl5mte',
 	    accessToken: 'pk.eyJ1Ijoicm1pZGRsZWhvdXNlIiwiYSI6ImNpZWhiMmRvazAwYWxzdmtnNGl1OGhtcjQifQ.BI0NDrCeXTBA8N4wQ07bvw'
-	}).addTo(map);                    
+	}).addTo(map);  
+                                
+
+
+
+   
+     L.marker([51.5, -0.09])
+	.bindLabel('A sweet static label!', { noHide: true })
+    .addTo(map);
+//var marker = L.marker([51.497809, -0.092466]).addTo(map); 
+
+
+	                  
 	</script>
    
   </body>
