@@ -2,7 +2,7 @@ var greenIcon = L.icon({
 	iconUrl: 'public/Blue2.png',
 
 	iconSize:     [60, 60], // size of the icon
-	iconAnchor:   [0, 68], // point of the icon which will correspond to marker's location
+	iconAnchor:   [0, 72], // point of the icon which will correspond to marker's location
 	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 
@@ -11,7 +11,7 @@ var blueIcon = L.icon({
 	iconUrl: 'public/green3.png',
 
 	iconSize:     [90, 90], // size of the icon
-	iconAnchor:   [0, 90], // point of the icon which will correspond to marker's location
+	iconAnchor:   [-12, 82], // point of the icon which will correspond to marker's location
 	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
                 
