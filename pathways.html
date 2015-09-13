@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="../libs/leaflet/leaflet.ie.css" /><![endif]-->
+		<link rel="stylesheet" href="public/css/main.css" />
+		<link rel="stylesheet" href="public/css/bootstrap.css" />
+		<link rel="stylesheet" href="public/css/bootstrap-drawer.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+		<!--Bootstrap and styling related-->
+		<script src="public/js/jquery-2.1.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>   
+		<script src="public/js/drawer.js"></script>
+	</head>
+
+	<body class="has-drawer">
+		<!--Modal code-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">How to hold a guitar</h4>
+					</div>
+					<div class="modal-body container-fluid">
+						<section class="row">
+							<div class="col-xs-6 col-md-4">
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9mMHDot4yaM" allowfullscreen></iframe>
+								</div>
+								+103
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jdl53xPX3C8" allowfullscreen></iframe>
+								</div>
+								+67
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jaNNSo1rLLA" allowfullscreen></iframe>
+								</div>
+								+32
+							</div>
+						</section>
+						<section>
+							<h2>Description</h2>
+							<p>Pour-over shabby chic slow-carb, Pitchfork asymmetrical VHS 3 wolf
+							moon deep v Schlitz Pinterest fixie four loko biodiesel actually hoodie.
+							Lumbersexual meggings sartorial Schlitz Neutra Kickstarter. Crucifix blog
+							meditation, hella Marfa aesthetic seitan irony master cleanse McSweeney's
+							cray street art jean shorts. Neutra authentic semiotics, four dollar
+							toast banjo cold-pressed paleo Odd Future. Scenester typewriter polaroid
+							stumptown. Pinterest yr Helvetica, deep v kitsch messenger bag mixtape
+							raw denim bitters. Fap readymade cronut blog, Kickstarter letterpress
+							master cleanse.</p>
+						</section>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="editBtn">Edit</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Drawer code-->
+		<div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
+			<!--<div class="drawer-controls">-->
+				<!--<a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>-->
+			<!--</div>-->
+			<div class="drawer-contents">
+				<div class="drawer-heading">
+					<h1 class="drawer-title">Hey Jude - Path</h1>
+				</div>
+				<div class="drawer-body">
+					<div class="circle-5">Learn Guitar</div>
+					<div class="circle-2" data-toggle="modal" data-target="#myModal">How to hold a guitar</div>
+					<div class="circle-3">Left hand</div>  
+					<div class="circle-4">C-chord</div>  
+					<div class="circle-1">D-chord</div>  
+					<div class="circle-5">G-chord</div>  
+					<div class="circle-2">Right hand</div>  
+					<div class="circle-3">Strumming</div>  
+					<div class="circle-4">Hey Jude Chords</div>
+					<div class="circle-1">Hey Jude Complete</div>
+				</div>   
+			</div>
+		</div>
+
+		<!--Navbar code-->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<a class="navbar-brand"><img alt="Logo"
+																	src="public/images/LogoTree.png"></a>
+				<h1>LearningTree.guru</h1>
+				<a><small id="user">guitarhero557</small></a>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+									</div>
+			</div>
+		</nav>
+
+	</body> 
+</html>
