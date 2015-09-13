@@ -2,15 +2,16 @@ body {
 	padding: 0;
 	margin: 0;
 }
-html, body, #map {
+html, body {
 	height: 100%;
 }
 #map {
-	width: 60%;
-	float: left;
+	height: calc(100% - 61px);
+	width: 100%;
 	position: relative;
 }
 .navbar {
 	margin-bottom: 0px !important;
+	height: 60px !important;
 }
 /*#map { height: 380px; }*/
