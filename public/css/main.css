@@ -1,1 +1,16 @@
-#map { height: 480px; }
+body {
+	padding: 0;
+	margin: 0;
+}
+html, body, #map {
+	height: 100%;
+}
+#map {
+	width: 60%;
+	float: left;
+	position: relative;
+}
+.navbar {
+	margin-bottom: 0px !important;
+}
+/*#map { height: 380px; }*/
