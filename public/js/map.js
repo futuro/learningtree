@@ -19,8 +19,8 @@ var blueIcon = L.icon({
 var blueclearIcon = L.icon({
 	iconUrl: 'public/Blue2.png',
 
-	iconSize:     [20, 20], // size of the icon
-	iconAnchor:   [5, 5], // point of the icon which will correspond to marker's location
+	iconSize:     [600, 600], // size of the icon
+	iconAnchor:   [300, 300], // point of the icon which will correspond to marker's location
 	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 
