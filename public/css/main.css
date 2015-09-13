@@ -20,6 +20,9 @@ html, body {
 	height: 60px !important;
 	border-radius: 0px !important;
 }
+#editBtn {
+	float: left;
+}
 #user {
 	float: right;
 	padding-top: 20px;
