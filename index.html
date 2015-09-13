@@ -42,7 +42,7 @@
 	</head>
 
 	<body class="has-drawer">
-		<!--Modal code-->
+		<!--"guitar holding" Modal code-->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
@@ -92,6 +92,71 @@
 			</div>
 		</div>
 
+		<!--pathSelector Modal code-->
+		<div class="modal fade" id="pathSelector" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="pathSelectorTitle">Select a path</h4>
+					</div>
+					<div class="modal-body container-fluid">
+						<section class="row">
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph One</p>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph Two</p>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph Three</p>
+							</div>
+						</section>
+						<section>
+							<h2>Description</h2>
+						</section>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="createBtn" data-toggle="modal" href="#pathCreator">
+							Create new path
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--pathCreator Modal code-->
+		<div class="modal fade" id="pathCreator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="pathSelectorTitle">Create a new path</h4>
+					</div>
+					<div class="modal-body container-fluid">
+						<section class="row">
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph One</p>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph Two</p>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<p>Paragraph Three</p>
+							</div>
+						</section>
+						<section>
+							<h2>Description</h2>
+						</section>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!--Drawer code-->
 		<div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
 			<!--<div class="drawer-controls">-->
@@ -99,6 +164,9 @@
 			<!--</div>-->
 			<div class="drawer-contents">
 				<div class="drawer-heading">
+					<button type="button" class="btn btn-default addpath" data-toggle="modal" data-target="#pathSelector">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
 					<h1 class="drawer-title">Hey Jude Complete Path</h1>
 				</div>
 				<div class="drawer-body">
