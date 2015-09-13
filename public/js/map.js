@@ -14,12 +14,19 @@ var blueIcon = L.icon({
 	iconAnchor:   [0, 90], // point of the icon which will correspond to marker's location
 	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
+      
+function onClick(e) {
+    //console.log(this.options.win_url);
+    $('.drawer').drawer('toggle');
+}
+
 
 window.markerLayers={};
 
 var map = L.map('map').setView([51.505, -0.09], 4);
                                           
-map.options.maxZoom=10
+map.options.maxZoom=7
+map.options.minZoom=4
 
 //L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 //	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a>href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a //href="http://mapbox.com">Mapbox</a>',
@@ -33,34 +40,34 @@ L.graticule({ interval: 1 }).addTo(map);
 
 
  var v = new L.marker([51.203156, -0.443342], {icon: blueIcon})
-.bindLabel('Styles', { noHide: true });       
+.bindLabel('Styles', { noHide: true }).on('click', onClick);       
  var w = new L.marker([50.403156, -0.443342], {icon: greenIcon})
-.bindLabel('Boom-Chick', { noHide: true });
+.bindLabel('Boom-Chick', { noHide: true }).on('click', onClick);
  var x = new L.marker([51.203156, -1.443342], {icon: greenIcon})
-.bindLabel('Blues', { noHide: true });
+.bindLabel('Blues', { noHide: true }).on('click', onClick);
  var y = new L.marker([52.003856, -0.308940], {icon: greenIcon}) 
-.bindLabel('Bo Diddley', { noHide: true });   
+.bindLabel('Bo Diddley', { noHide: true }).on('click', onClick);   
  var z = new L.marker([51.206502, 0.805734], {icon: greenIcon})
-.bindLabel('Modern Rock', { noHide: true });     
+.bindLabel('Modern Rock', { noHide: true }).on('click', onClick);     
 
 
                               
  var a = new L.marker([51.852556, 5.384597], {icon: blueIcon})
-.bindLabel('Chords', { noHide: true });    
+.bindLabel('Chords', { noHide: true }).on('click', onClick);    
  var e = new L.marker([51.352556, 6.284597], {icon: greenIcon})
-.bindLabel('C', { noHide: true });
+.bindLabel('C', { noHide: true }).on('click', onClick);
 
 
  var b = new L.marker([52.352556, 4.784597], {icon: greenIcon}) 
-.bindLabel('A', { noHide: true });   
+.bindLabel('A', { noHide: true }).on('click', onClick);   
  var c = new L.marker([51.752556, 4.314597], {icon: greenIcon})
-.bindLabel('G', { noHide: true });    
+.bindLabel('G', { noHide: true }).on('click', onClick);    
  var d = new L.marker([52.002556, 6.784597], {icon: greenIcon})
-.bindLabel('D', { noHide: true });   
+.bindLabel('D', { noHide: true }).on('click', onClick);   
  var f = new L.marker([51.252556, 4.884597], {icon: greenIcon})
-.bindLabel('E', { noHide: true });    
+.bindLabel('E', { noHide: true }).on('click', onClick);    
  var g = new L.marker([52.452556, 6.284597], {icon: greenIcon})
-.bindLabel('F', { noHide: true });
+.bindLabel('F', { noHide: true }).on('click', onClick);
 
 
 
