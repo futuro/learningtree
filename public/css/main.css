@@ -6,11 +6,22 @@ html, body, #map {
 	height: 100%;
 }
 #map {
-	width: 60%;
+	width: 90%;
+	height: 90%;
 	float: left;
 	position: relative;
 }
 .navbar {
+	padding: 20px 20px;
 	margin-bottom: 0px !important;
+	border-radius: 0px !important;
+}
+#user {
+	float: right;
+	padding-top: 10px;
 }
 /*#map { height: 380px; }*/
+iframe {
+	float: left;
+	margin-left: 1.5%;
+}
