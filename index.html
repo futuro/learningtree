@@ -39,6 +39,43 @@
 	</head>
 
 	<body class="has-drawer">
+
+		<!--Modal code-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Hey Jude</h4>
+					</div>
+					<div class="modal-body">
+						<section>
+							<iframe width="30%" src="https://www.youtube.com/embed/9mMHDot4yaM" frameborder="0" allowfullscreen></iframe>
+							<iframe width="30%" src="https://www.youtube.com/embed/1uwwWXLbXfk" frameborder="0" allowfullscreen></iframe>
+							<iframe width="30%" src="https://www.youtube.com/embed/6Z8rNYp8HO8" frameborder="0" allowfullscreen></iframe>
+						</section>
+						<section>
+							<h2>Description</h2>
+							<p>Pour-over shabby chic slow-carb, Pitchfork asymmetrical VHS 3 wolf
+							moon deep v Schlitz Pinterest fixie four loko biodiesel actually hoodie.
+							Lumbersexual meggings sartorial Schlitz Neutra Kickstarter. Crucifix blog
+							meditation, hella Marfa aesthetic seitan irony master cleanse McSweeney's
+							cray street art jean shorts. Neutra authentic semiotics, four dollar
+							toast banjo cold-pressed paleo Odd Future. Scenester typewriter polaroid
+							stumptown. Pinterest yr Helvetica, deep v kitsch messenger bag mixtape
+							raw denim bitters. Fap readymade cronut blog, Kickstarter letterpress
+							master cleanse.</p>
+						</section>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<!--<button type="button" class="btn btn-primary">Save changes</button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Drawer code-->
 		<div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
 			<!--<div class="drawer-controls">-->
 				<!--<a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>-->
@@ -52,10 +89,12 @@
 					This is a properly padded container for content in the
 					drawer that isn't a navigation.
 					</p>
-					<a href="#">A Regular Link</a>
 				</div>
 				<ul class="drawer-nav">
-					<li role="presentation" class="active"><a href="#">Home</a></li>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+						Learn Hey Jude THIS IS FILLER TEXT
+					</button>
+					<li role="presentation"><a href="#">Home</a></li>
 					<li role="presentation"><a href="#">Profile</a></li>
 					<li role="presentation"><a href="#">Messages</a></li>
 				</ul>
@@ -65,6 +104,7 @@
 			</div>
 		</div>
 
+		<!--Navbar code-->
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<a><small id="user">guitarhero557</small></a>

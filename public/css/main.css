@@ -1,9 +1,12 @@
-body {
-	padding: 0;
-	margin: 0;
-}
+/*body {*/
+	/*padding: 0;*/
+	/*margin: 0;*/
+/*}*/
 html, body {
 	height: 100%;
+}
+.modal-backdrop {
+	z-index: 0 !important;
 }
 #map {
 	height: calc(100% - 61px);
