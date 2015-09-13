@@ -14,11 +14,18 @@ html, body {
 	/*float: left;*/
 	position: relative;
 }
+.addpath {
+	float: right;
+	font-size: 50px;
+}
 .navbar {
 	/*padding: 20px 20px;*/
 	margin-bottom: 0px !important;
 	height: 80px !important;
 	border-radius: 0px !important;
+}
+.learningPath:hover {
+	border-color: #f47c3c;
 }
 .navbar h1 {
 	color: #fff;
@@ -36,7 +43,7 @@ html, body {
 	margin-left: -5px;
 	margin-top: -5px;
 }
-#editBtn {
+#editBtn, #createBtn {
 	float: left;
 }
 #user {
