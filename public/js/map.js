@@ -39,7 +39,7 @@ function onZoomEnd(e) {
 	map = window.theMap;
 	//    mLayers = window.markerLayers;
 	zoom = map.getZoom();
-	if (zoom==13){
+	if (zoom==7){
 		console.log(zoom);
 		map.addLayer(window.theCities);
 		map.removeLayer(window.theGuitar);
@@ -53,21 +53,21 @@ function onZoomStart(e){
 	map = window.theMap;
 	//    mLayers = window.markerLayers;
 	zoom = map.getZoom();
-	if (zoom==13){
+	if (zoom==7){
 		console.log(zoom);
 		map.removeLayer(window.theCities);
 		map.addLayer(window.theGuitar);
 	}
 }
 
-var map = L.map('map').setView([51.505, -0.09], 12);
+var map = L.map('map').setView([51.505, -0.09], 6);
 
-map.on('draw:created', function (e) {
-	L.TileLayer.boundaryCanvas(osmUrl, {
-		boundary: e.layer.toGeoJSON(),
-		attribution: osmAttribution
-	}).addTo(map);
-});
+//map.on('draw:created', function (e) {
+//	L.TileLayer.boundaryCanvas(osmUrl, {
+//		boundary: e.layer.toGeoJSON(),
+//		attribution: osmAttribution
+//	}).addTo(map);
+//});
 
 L.graticule({ interval: 1 }).addTo(map);
 
@@ -78,12 +78,12 @@ map.on('zoomstart',onZoomStart);
 window.theMap = map;
 
 
-var x = new L.marker([51.5, -0.09], {icon: greenIcon})
-	.bindLabel('strumming', { noHide: true });
-var y = new L.marker([51.51, -0.1], {icon: greenIcon})
-	.bindLabel('fingering', { noHide: true });
-var z = new L.marker([51.5, -0.11], {icon: greenIcon})
-	.bindLabel('ear training', { noHide: true }).on('mouseover', onClick);
+ var x = new L.marker([51.003156, -1.643342], {icon: greenIcon})
+.bindLabel('strumming', { noHide: true });
+ var y = new L.marker([52.103856, -0.308940], {icon: greenIcon}) 
+.bindLabel('fingering', { noHide: true });   
+ var z = new L.marker([51.206502, 1.335734], {icon: greenIcon})
+.bindLabel('ear training', { noHide: true }).on('mouseover', onClick);
 
 var xs = L.layerGroup([x,y,z]);
 
