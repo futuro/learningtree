@@ -1,5 +1,5 @@
 var greenIcon = L.icon({
-	iconUrl: 'yum.png',
+	iconUrl: 'public/yum.png',
 
 	iconSize:     [100, 100], // size of the icon
 	iconAnchor:   [-5, 50], // point of the icon which will correspond to marker's location
@@ -8,7 +8,7 @@ var greenIcon = L.icon({
 
 
 var blueIcon = L.icon({
-	iconUrl: 'yum.png',
+	iconUrl: 'public/yum.png',
 
 	iconSize:     [200, 200], // size of the icon
 	iconAnchor:   [75, 100], // point of the icon which will correspond to marker's location
