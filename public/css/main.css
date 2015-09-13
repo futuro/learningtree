@@ -8,10 +8,22 @@ html, body {
 #map {
 	height: calc(100% - 61px);
 	width: 100%;
+	/*float: left;*/
 	position: relative;
 }
 .navbar {
+	/*padding: 20px 20px;*/
 	margin-bottom: 0px !important;
 	height: 60px !important;
+	border-radius: 0px !important;
+}
+#user {
+	float: right;
+	padding-top: 20px;
+	font-size: 14px;
 }
 /*#map { height: 380px; }*/
+iframe {
+	float: left;
+	margin-left: 1.5%;
+}
