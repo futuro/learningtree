@@ -14,7 +14,17 @@ var blueIcon = L.icon({
 	iconAnchor:   [0, 90], // point of the icon which will correspond to marker's location
 	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
-      
+                
+
+var blueclearIcon = L.icon({
+	iconUrl: 'public/Blue2.png',
+
+	iconSize:     [20, 20], // size of the icon
+	iconAnchor:   [5, 5], // point of the icon which will correspond to marker's location
+	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+
 function onClick(e) {
     //console.log(this.options.win_url);
     $('.drawer').drawer('toggle');
@@ -27,6 +37,8 @@ var map = L.map('map').setView([51.505, -0.09], 4);
                                           
 map.options.maxZoom=7
 map.options.minZoom=4
+              
+             
 
 //L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 //	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a>href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a //href="http://mapbox.com">Mapbox</a>',
@@ -69,11 +81,20 @@ L.graticule({ interval: 1 }).addTo(map);
  var g = new L.marker([52.452556, 6.284597], {icon: greenIcon})
 .bindLabel('F', { noHide: true }).on('click', onClick);
 
+                    
+   var ki = new L.marker([-27.257553, -100.691666], {icon: blueclearIcon,title: "Hey Jude"})
+.bindLabel('Hey Jude', { noHide: true}).on('click', onClick);
 
 
 
 
-var xs = L.layerGroup([v,w,x,y,z,a,b,c,d,e,f,g]);           
+
+var xs = L.layerGroup([v,w,x,y,z,a,b,c,d,e,f,g]);  
+var xt = L.layerGroup([ki]);         
+                                                       
+map.addControl( new L.Control.Search({layer: xt}) );   
+L.control.defaultExtent()
+  .addTo(map); 
 
 var markers = new L.MarkerClusterGroup({
     iconCreateFunction: function(cluster) {   
