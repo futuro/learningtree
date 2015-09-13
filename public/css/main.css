@@ -20,6 +20,9 @@ html, body {
 	height: 60px !important;
 	border-radius: 0px !important;
 }
+#editBtn {
+	float: left;
+}
 #user {
 	float: right;
 	padding-top: 20px;
@@ -31,18 +34,27 @@ iframe {
 	margin-left: 1.5%;
 }
           
-.circle {
-	width:100px;
+.circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6, 
+.circle-7, .circle-8 
+{
+	width: relative;
 	height:100px;
+	padding: 0 10px;
 	border-radius:50px;
-	font-size:20px;
-	color:#fff;
+	font-size:16px;
 	line-height:100px;
 	text-align:center;
-	background:#000;     
 	z-index: 2;
-	
+	color: #fff;
+	margin: 20px;
+	display: inline-block;
 }     
+
+.circle-1 {background: #325d88;}
+.circle-2 {background: #93c54b;}
+.circle-3 {background: #29abe0;}
+.circle-4 {background: #f47c3c;}
+.circle-5 {background: #d9534f;}
 
 .circle::before {
   /* this is the vertical line */
