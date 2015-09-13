@@ -24,6 +24,9 @@ html, body {
 	height: 80px !important;
 	border-radius: 0px !important;
 }
+.learningPath:hover {
+	border-color: #f47c3c;
+}
 .navbar h1 {
 	color: #fff;
 	line-height: 65px;
